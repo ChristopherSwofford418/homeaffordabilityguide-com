@@ -41,7 +41,7 @@ export default function PrivacyPage() {
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">5. Contact Us</h2>
         <p className="mb-6">
-          If you have questions about this Privacy Policy, please contact us at privacy@homeaffordabilityguide.com.
+          If you have questions about this Privacy Policy, please contact us at <a className="underline" href="mailto:info@clearpasstechnologies.com">info@clearpasstechnologies.com</a>.
         </p>
       </div>
     </div>
