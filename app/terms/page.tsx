@@ -3,6 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service | homeaffordabilityguide.com",
   description: "Review the terms and conditions for using homeaffordabilityguide.com and its tools.",
+  alternates: { canonical: "/terms/" },
 };
 
 export default function TermsPage() {

@@ -7,18 +7,16 @@ export const metadata: Metadata = {
     default: "HomeAffordabilityCalc — How Much House Can You Afford?",
     template: "%s · HomeAffordabilityCalc",
   },
-  description: "Free home affordability calculator. Find out how much house you can afford based on your income, debt, and down payment. Compare affordability across US cities.",
+  description: "Explore a home affordability illustration using your income, debt, down payment and housing costs.",
   applicationName: "HomeAffordabilityCalc",
   openGraph: {
     type: "website",
     siteName: "HomeAffordabilityCalc",
     title: "HomeAffordabilityCalc — How Much House Can You Afford?",
-    description: "Free home affordability calculator. Find out how much house you can afford based on your income, debt, and down payment. Compare affordability across US cities.",
-    url: "https://homeaffordabilityguide.com",
+    description: "Explore a home affordability illustration using your income, debt, down payment and housing costs.",
     locale: "en_US",
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://homeaffordabilityguide.com" },
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -35,13 +33,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen bg-white text-ink antialiased">
         <header className="border-b border-line bg-white">
-          <div className="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+          <div className="mx-auto max-w-6xl px-4 py-4 flex flex-wrap gap-4 items-center justify-between">
             <Link href="/" className="font-serif text-xl font-bold tracking-tight">
               HomeAffordabilityCalc
             </Link>
-            <nav className="hidden md:flex gap-6 text-sm">
+            <nav aria-label="Main navigation" className="flex flex-wrap gap-4 md:gap-6 text-sm">
               <Link href="/calculator" className="hover:text-accent">Affordability Calculator</Link>
-              <Link href="/learn/how-much-house-can-i-afford" className="hover:text-accent">Affordability Guide</Link>
+              <Link href="/learn/" className="hover:text-accent">Guides</Link>
               <Link href="/about" className="hover:text-accent">About</Link>
             </nav>
           </div>
@@ -51,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-3 gap-8 text-sm text-gray-700">
             <div>
               <div className="font-serif text-lg font-bold text-ink mb-2">HomeAffordabilityCalc</div>
-              <p>Free home affordability calculator. Find out how much house you can afford based on your income, debt, and down payment....</p>
+              <p>Explore a home affordability illustration using your own inputs.</p>
             </div>
             <div>
               <div className="font-semibold text-ink mb-2">Guides</div>
@@ -65,8 +63,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="font-semibold text-ink mb-2">Site</div>
               <ul className="space-y-1">
                 <li><Link href="/about" className="hover:text-accent">About</Link></li>
+                <li><Link href="/contact" className="hover:text-accent">Contact</Link></li>
+                <li><Link href="/methodology" className="hover:text-accent">Methodology &amp; Sources</Link></li>
                 <li><Link href="/privacy" className="hover:text-accent">Privacy</Link></li>
                 <li><Link href="/terms" className="hover:text-accent">Terms</Link></li>
+                <li><Link href="/disclaimer" className="hover:text-accent">Disclaimer</Link></li>
               </ul>
             </div>
           </div>
